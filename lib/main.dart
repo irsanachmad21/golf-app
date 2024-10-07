@@ -54,12 +54,18 @@ class CheckAuth extends StatelessWidget {
   }
 }
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final Map<String, String> formData = {'username': '', 'password': ''};
 
   final FocusNode usernameFocusNode = FocusNode();
   final FocusNode passwordFocusNode = FocusNode();
+  bool _isPasswordVisible = false;
 
   void onSubmit(BuildContext context) async {
     if (formKey.currentState!.validate()) {
@@ -77,7 +83,7 @@ class LoginPage extends StatelessWidget {
         if (account['username'] == formData['username'] &&
             account['password'] == formData['password']) {
           isValid = true;
-          loggedInUsername = account['username']; // Simpan username yang valid
+          loggedInUsername = account['username'];
           break;
         }
       }
@@ -86,9 +92,7 @@ class LoginPage extends StatelessWidget {
         // Simpan status login dan username
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await prefs.setBool('isLoggedIn', true);
-        await prefs.setString('username',
-            loggedInUsername); // Simpan username ke SharedPreferences
-        // Arahkan ke halaman utama
+        await prefs.setString('username', loggedInUsername);
         Navigator.pushReplacementNamed(context, '/main');
       } else {
         // Username atau password salah, tampilkan pesan error
@@ -142,7 +146,8 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20),
                 TextFormField(
                   focusNode: passwordFocusNode,
-                  obscureText: true,
+                  obscureText:
+                      !_isPasswordVisible,
                   decoration: InputDecoration(
                     labelText: 'Password',
                     labelStyle: TextStyle(color: Colors.white),
@@ -150,6 +155,20 @@ class LoginPage extends StatelessWidget {
                     fillColor: Colors.white.withOpacity(0.1),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible =
+                              !_isPasswordVisible;
+                        });
+                      },
                     ),
                   ),
                   style: TextStyle(color: Colors.white),
@@ -225,7 +244,7 @@ class _MainPageState extends State<MainPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Confirm Sign Out'),
+            title: Text('Konfirmasi Keluar'),
             content: Text('Apakah Anda yakin ingin keluar?'),
             actions: <Widget>[
               TextButton(
