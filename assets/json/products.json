@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "name": "Stick Golf",
+      "image": "assets/img/stick_golf.jpeg",
+      "price": "Rp 3.299.000",
+      "description": "Alat utama untuk bermain golf yang dirancang untuk meningkatkan jarak dan akurasi pukulan.",
+      "rating": 4.5
+    },
+    {
+      "name": "Bola Golf",
+      "image": "assets/img/bola_golf.jpeg",
+      "price": "Rp 159.000",
+      "description": "Bola berkualitas tinggi yang dirancang untuk performa optimal dalam setiap pukulan.",
+      "rating": 4.8
+    },
+    {
+      "name": "Celana Pendek Golf Pria",
+      "image": "assets/img/celana_pendek_pria.jpeg",
+      "price": "Rp 449.000",
+      "description": "Celana nyaman dan stylish yang cocok untuk bermain golf di cuaca panas.",
+      "rating": 4.2
+    },
+    {
+      "name": "Kaos Polo Golf Pria",
+      "image": "assets/img/kaos_polo_pria.jpeg",
+      "price": "Rp 299.000",
+      "description": "Kaos polo klasik yang memberikan kenyamanan dan gaya saat bermain di lapangan golf.",
+      "rating": 4.6
+    },
+    {
+      "name": "Kaos Polo Golf Wanita",
+      "image": "assets/img/kaos_polo_wanita.jpeg",
+      "price": "Rp 399.000",
+      "description": "Kaos polo yang dirancang khusus untuk wanita, menggabungkan gaya dan kenyamanan.",
+      "rating": 5.0
+    },
+    {
+      "name": "Sarung Tangan Golf",
+      "image": "assets/img/sarung_tangan.jpeg",
+      "price": "Rp 99.000",
+      "description": "Sarung tangan yang memberikan pegangan ekstra dan perlindungan saat memegang stick golf.",
+      "rating": 4.3
+    },
+    {
+      "name": "Topi Golf",
+      "image": "assets/img/topi.jpeg",
+      "price": "Rp 139.000",
+      "description": "Topi dengan desain stylish untuk melindungi wajah dari sinar matahari saat bermain.",
+      "rating": 4.7
+    },
+    {
+      "name": "Sepatu Golf",
+      "image": "assets/img/sepatu.jpeg",
+      "price": "Rp 1.299.000",
+      "description": "Sepatu yang dirancang khusus untuk memberikan stabilitas dan kenyamanan saat berjalan di lapangan.",
+      "rating": 4.9
+    },
+    {
+      "name": "Tas Stand Golf",
+      "image": "assets/img/tas_golf.jpeg",
+      "price": "Rp 1.399.000",
+      "description": "Tas praktis dengan kaki yang berdiri, memudahkan membawa perlengkapan golf ke mana saja.",
+      "rating": 4.4
+    },
+    {
+      "name": "Payung Profilter",
+      "image": "assets/img/payung.jpeg",
+      "price": "Rp 159.000",
+      "description": "Payung tahan angin yang melindungi Anda dari hujan dan sinar matahari saat bermain.",
+      "rating": 4.1
+    },
+    {
+      "name": "Golf Tee",
+      "image": "assets/img/golf_tee.jpeg",
+      "price": "Rp 49.000",
+      "description": "Tee berkualitas yang membantu menstabilkan bola saat tee-off untuk pukulan yang lebih baik.",
+      "rating": 4.5
+    },
+    {
+      "name": "Handuk Golf",
+      "image": "assets/img/handuk_golf.jpeg",
+      "price": "Rp 139.000",
+      "description": "Handuk ringan yang sempurna untuk membersihkan stick dan bola golf selama permainan.",
+      "rating": 4.2
+    }
+  ]
+}
