@@ -60,6 +60,7 @@ class EntryFormState extends State<EntryForm> {
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
+        titleSpacing: 0,
       ),
       body: Form(
         key: _formKey,
@@ -145,8 +146,7 @@ class EntryFormState extends State<EntryForm> {
                       String formattedTime =
                           "${selectedTime.hour.toString().padLeft(2, '0')}:${selectedTime.minute.toString().padLeft(2, '0')}";
                       setState(() {
-                        jamController.text =
-                            formattedTime;
+                        jamController.text = formattedTime;
                       });
                     }
                   },
@@ -257,8 +257,7 @@ class EntryFormState extends State<EntryForm> {
                           onChanged: (String? value) {
                             setState(() {
                               drivingRangeValue = value!;
-                              ballsValue =
-                                  null;
+                              ballsValue = null;
                             });
                           },
                         ),
@@ -269,8 +268,7 @@ class EntryFormState extends State<EntryForm> {
                           onChanged: (String? value) {
                             setState(() {
                               drivingRangeValue = value!;
-                              ballsValue =
-                                  null;
+                              ballsValue = null;
                             });
                           },
                         ),
